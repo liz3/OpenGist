@@ -23,7 +23,7 @@ COPY ["./package.json", "yarn.lock", "./"]
 COPY ["./src", "./src"]
 
 # Auto build the project
-RUN npm install && npm install yarn && yarn build
+RUN npm i -g yarn && yarn && yarn build
 
 # Use the Master Node for releasing
 FROM base AS release
