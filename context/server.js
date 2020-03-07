@@ -20,8 +20,8 @@ cluster.on('exit', (worker, code, signal) => {
     const app = express();
     app.use(bodyParser.json());
     app.use(express.static(path.join(__dirname, 'build')));
-    
-    database.startDatabase("database", 27017, "opengist", (err, dbApi) => {
+
+    database.startDatabase("open-gist-database", 27017, "opengist", (err, dbApi) => {
         if(err) {
             return;
         }
@@ -52,16 +52,16 @@ cluster.on('exit', (worker, code, signal) => {
             response.json({success:false , messsage: "err"})
           })
         })
-    
+
         app.get('/*', (req, res) => {
             res.sendFile(path.join(`${__dirname}/build/index.html`));
           })
         const port = process.env.PORT || 3000;
         app.listen(port, () => {
-            
+
             console.log('App is listening on port ' + port);
         });
-        
+
     })
 
 
