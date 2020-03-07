@@ -1,7 +1,7 @@
 # OpenGist
 OpenGist is a free software pastebin service. Its textview is based on monaco, storage is provided by a mongodb server, this is a mono app, everything is in one program. The Frontend was build using react.
 
-[Public usable instance](https://paste.savagellc.net)
+[Public usable instance](https://paste.21xayah.com)
 
 # Setup
 This guide will show you how to install OpenGist on your local/remote computer/server.
@@ -16,5 +16,5 @@ You will need to install the following packages:
 * Navigate to the root folder from the command line
 * Run the site using the command `docker-compose up -d --build`
 
-# License 
+# License
 This is free software licensed under GPL 2.0
