@@ -153,7 +153,7 @@ class Panel extends Component {
                         }, 5000)
                     })
                   }
-              
+
                 }}
               >{this.state.copied === "false" ? "Copy link to clipboard" : this.state.copied}</button>
             </div>
@@ -163,7 +163,7 @@ class Panel extends Component {
     return (
       <div
       className="panel-header" >
-        <div style={{display: 'flex', flexWrap: "wrap"}}>
+        <div style={{display: 'flex', flexWrap: "wrap", alignItems: "center"}}>
         {content}
         </div>
          <img className={"logo-img"} src={require("../assets/logo.png")} alt="logo"/>
